@@ -26,3 +26,9 @@ funBus.addEventListener('mouseout', () =>{
 window.addEventListener('load', function(e){
     alert('This page has loaded');
 })
+
+const button = document.querySelector('.btn');
+button.addEventListener('click', function(event){
+    event.target.style.color = 'black';
+    EventTarget.stopPropagation();
+})
