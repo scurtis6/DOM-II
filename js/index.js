@@ -1,4 +1,4 @@
-// Your code goes here (mouseenter, mouseleave, mouseover, mouseout, load, click, dblclick)
+// Your code goes here (mouseenter, mouseleave, mouseover, mouseout, load, click, dblclick, keypress)
 const contentSection = document.querySelector(".content-section");
 contentSection.addEventListener("mouseenter", () => {
     contentSection.style.transform = "scale(1.2)";
@@ -32,9 +32,20 @@ document.querySelectorAll('.destination').forEach(e => {
     })
 })
 
+const body = document.querySelector("body");
+const nav = document.querySelector(".main-navigation");
+	body.addEventListener("keydown", function() {
+	  nav.style.position = "absolute";
+    })
+
 const keyDown = document.querySelector('body');
-keyDown.addEventListener('keydown', () =>{
-    alert('You press a key!');
+keyDown.addEventListener('keypress', (event) =>{
+    alert(`You pressed the "${event.key}" key`);
+})
+
+const footer = document.querySelector('footer');
+footer.addEventListener('focus', function(){
+    footer.style.background = 'green'
 })
 
 const stopNav = document.querySelector('nav');
