@@ -1,4 +1,4 @@
-// Your code goes here (mouseenter, mouseleave, mouseover, mouseout, load)
+// Your code goes here (mouseenter, mouseleave, mouseover, mouseout, load, click, dblclick)
 const contentSection = document.querySelector(".content-section");
 contentSection.addEventListener("mouseenter", () => {
     contentSection.style.transform = "scale(1.2)";
@@ -16,13 +16,6 @@ funBus.addEventListener('mouseout', () =>{
     funBus.style.color = 'black'
 })
 
-// const textContent = document.querySelector(".intro");
-// textContent.addEventListener('scroll', () => {
-//     document.querySelector('p').innerHTML = "This this scrolling in div"
-// })
-// window.addEventListener('load', (event) =>{
-//     console.log('Page is fully loaded');
-// });
 window.addEventListener('load', function(e){
     alert('This page has loaded');
 })
@@ -30,5 +23,11 @@ window.addEventListener('load', function(e){
 const button = document.querySelector('.btn');
 button.addEventListener('click', function(event){
     event.target.style.color = 'black';
-    EventTarget.stopPropagation();
+    event.stopPropagation();
+})
+
+document.querySelectorAll('.destination').forEach(e => {
+    e.addEventListener('dblclick', () =>{
+        e.style.backgroundColor = '#17A2B8';
+    })
 })
