@@ -31,3 +31,14 @@ document.querySelectorAll('.destination').forEach(e => {
         e.style.backgroundColor = '#17A2B8';
     })
 })
+
+const keyDown = document.querySelector('body');
+keyDown.addEventListener('keydown', () =>{
+    alert('You press a key!');
+})
+
+const stopNav = document.querySelector('nav');
+stopNav.addEventListener('click', function(event){
+    event.preventDefault();
+    alert('Nav will not refresh!')
+})
