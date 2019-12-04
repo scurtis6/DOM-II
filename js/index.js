@@ -1,4 +1,4 @@
-// Your code goes here (mouseenter, mouseleave, mouseover, mouseout, load, click, dblclick, keypress)
+// Your code goes here (mouseenter, mouseleave, mouseover, mouseout, load, click, dblclick, keydown, keypress, grab)
 const contentSection = document.querySelector(".content-section");
 contentSection.addEventListener("mouseenter", () => {
     contentSection.style.transform = "scale(1.2)";
@@ -43,9 +43,10 @@ keyDown.addEventListener('keypress', (event) =>{
     alert(`You pressed the "${event.key}" key`);
 })
 
-const footer = document.querySelector('footer');
-footer.addEventListener('focus', function(){
-    footer.style.background = 'green'
+const headerImg = document.querySelector('.intro img');
+headerImg.style.cursor = 'grab'
+headerImg.addEventListener('drag', function(){
+    headerImg.style.display = 'none'
 })
 
 const stopNav = document.querySelector('nav');
